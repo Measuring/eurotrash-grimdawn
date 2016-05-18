@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Eurotrash.GrimDawn.Import.Common
+namespace Eurotrash.GrimDawn.Import.Extensions
 {
     public static class Controls
     {

@@ -1,4 +1,4 @@
-﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Search
+﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Search
 {
     partial class ConstellationSearchControl
     {
@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this._effectsTextBox = new System.Windows.Forms.TextBox();
             this._tipLabel = new System.Windows.Forms.Label();
-            this._constellationsTreeView = new Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Search.ConstellationsTreeView();
+            this._constellationsTreeView = new ConstellationsTreeView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 

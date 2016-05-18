@@ -1,16 +1,15 @@
-﻿using Eurotrash.GrimDawn.Core.Analysis.Affinities;
-using Eurotrash.GrimDawn.Core.Analysis.Search;
-using Eurotrash.GrimDawn.Core.Build.Devotions;
-using Eurotrash.GrimDawn.Core.Data;
-using Eurotrash.GrimDawn.Core.Data.Devotions;
-using Eurotrash.GrimDawn.WinFormsFrontEnd.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Eurotrash.GrimDawn.Core.Analysis.Affinities;
+using Eurotrash.GrimDawn.Core.Analysis.Search;
+using Eurotrash.GrimDawn.Core.Build.Devotions;
+using Eurotrash.GrimDawn.Core.Data.Devotions;
+using Eurotrash.GrimDawn.WinFormsFrontEnd.Common;
 
-namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Search
+namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Search
 {
     public partial class ConstellationsTreeView : UserControl
     {

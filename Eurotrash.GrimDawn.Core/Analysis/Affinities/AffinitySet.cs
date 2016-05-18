@@ -190,7 +190,7 @@ namespace Eurotrash.GrimDawn.Core.Analysis.Affinities
 
                     text.Append(_affinities[type]);
                     text.Append(" ");
-                    text.Append(((AffinityType)type).ToString());
+                    text.Append((AffinityType)type);
                 }
             }
 

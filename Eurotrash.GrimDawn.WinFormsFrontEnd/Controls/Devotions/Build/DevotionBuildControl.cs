@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using Eurotrash.GrimDawn.Core.Analysis.StatisticBonuses;
-using Eurotrash.GrimDawn.Core.Data;
 using Eurotrash.GrimDawn.Core.Analysis.StatisticBonuses.BonusTypes;
-using Eurotrash.GrimDawn.Core.Build.Devotions;
 using Eurotrash.GrimDawn.Core.Build;
-using System.Text;
+using Eurotrash.GrimDawn.Core.Build.Devotions;
 
-namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Build
+namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
 {
     public partial class DevotionBuildControl : UserControl
     {

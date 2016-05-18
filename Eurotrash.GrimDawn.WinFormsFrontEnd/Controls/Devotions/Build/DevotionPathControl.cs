@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Eurotrash.GrimDawn.Core.Analysis.Constellations;
+using Eurotrash.GrimDawn.Core.Build;
 using Eurotrash.GrimDawn.Core.Build.Devotions;
 using Eurotrash.GrimDawn.WinFormsFrontEnd.Common;
-using Eurotrash.GrimDawn.Core.Analysis.Constellations;
 using Eurotrash.GrimDawn.WinFormsFrontEnd.Forms;
-using Eurotrash.GrimDawn.Core.Build;
 
-namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Build
+namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
 {
     public partial class DevotionPathControl : UserControl
     {

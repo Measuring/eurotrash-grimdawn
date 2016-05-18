@@ -54,8 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Controls.cs" />
-    <Compile Include="Common\Html.cs" />
+    <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Extensions\HtmlNodeExtensions.cs" />
     <Compile Include="Common\HttpHelper.cs" />
     <Compile Include="Common\ProxySettings.cs" />
     <Compile Include="Controls\DevotionsImportControl.cs">

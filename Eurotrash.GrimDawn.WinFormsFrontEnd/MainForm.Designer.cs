@@ -1,4 +1,6 @@
-﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd
+﻿using Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions;
+
+namespace Eurotrash.GrimDawn.WinFormsFrontEnd
 {
     partial class MainForm
     {
@@ -32,7 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this._tabControl = new System.Windows.Forms.TabControl();
             this._constellationsTabPage = new System.Windows.Forms.TabPage();
-            this._constellationsControl = new Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.ConstellationsControl();
+            this._constellationsControl = new ConstellationsControl();
             this._imageList = new System.Windows.Forms.ImageList(this.components);
             this._menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -204,7 +206,7 @@
 
         private System.Windows.Forms.TabControl _tabControl;
         private System.Windows.Forms.TabPage _constellationsTabPage;
-        private Controls.ConstellationsControl _constellationsControl;
+        private ConstellationsControl _constellationsControl;
         private System.Windows.Forms.ImageList _imageList;
         private System.Windows.Forms.MenuStrip _menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

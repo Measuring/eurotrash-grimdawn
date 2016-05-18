@@ -70,6 +70,7 @@
     <Compile Include="Data\Devotions\Star.cs" />
     <Compile Include="Data\Devotions\StatisticBonus.cs" />
     <Compile Include="Data\GrimDawnDataContext.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VersionInfo.cs" />
   </ItemGroup>

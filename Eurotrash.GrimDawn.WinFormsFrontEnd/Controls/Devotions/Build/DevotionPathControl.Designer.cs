@@ -1,4 +1,4 @@
-﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Build
+﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
 {
     partial class DevotionPathControl
     {

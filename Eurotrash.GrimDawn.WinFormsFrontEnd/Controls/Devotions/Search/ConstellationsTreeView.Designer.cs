@@ -1,4 +1,4 @@
-﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Search
+﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Search
 {
     partial class ConstellationsTreeView
     {

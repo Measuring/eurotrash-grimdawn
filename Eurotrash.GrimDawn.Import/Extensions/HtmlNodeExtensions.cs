@@ -1,9 +1,8 @@
-﻿using HtmlAgilityPack;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using HtmlAgilityPack;
 
-namespace Eurotrash.GrimDawn.Import.Common
+namespace Eurotrash.GrimDawn.Import.Extensions
 {
     /// <summary>
     /// Additional helper functions for HtmlAgilityPack.

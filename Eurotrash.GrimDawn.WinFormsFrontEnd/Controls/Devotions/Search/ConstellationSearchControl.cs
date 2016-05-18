@@ -1,18 +1,12 @@
-﻿using Eurotrash.GrimDawn.Core.Analysis.Search;
-using Eurotrash.GrimDawn.Core.Analysis.StatisticBonuses;
-using Eurotrash.GrimDawn.Core.Build.Devotions;
-using Eurotrash.GrimDawn.Core.Data;
-using Eurotrash.GrimDawn.Core.Data.Devotions;
-using Eurotrash.GrimDawn.WinFormsFrontEnd.Common;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
+﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using Eurotrash.GrimDawn.Core.Analysis.Search;
+using Eurotrash.GrimDawn.Core.Build.Devotions;
+using Eurotrash.GrimDawn.Core.Data.Devotions;
+using Eurotrash.GrimDawn.WinFormsFrontEnd.Common;
 
-namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Search
+namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Search
 {
     public partial class ConstellationSearchControl : UserControl
     {

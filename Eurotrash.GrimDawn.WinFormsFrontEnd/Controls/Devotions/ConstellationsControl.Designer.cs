@@ -1,4 +1,7 @@
-﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls
+﻿using Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build;
+using Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Search;
+
+namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions
 {
     partial class ConstellationsControl
     {
@@ -29,9 +32,9 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this._devotionBuildControl = new Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Build.DevotionBuildControl();
+            this._devotionBuildControl = new DevotionBuildControl();
             this.headingControl1 = new Eurotrash.GrimDawn.WinFormsFrontEnd.Common.HeadingControl();
-            this._constellationSearchControl = new Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Search.ConstellationSearchControl();
+            this._constellationSearchControl = new ConstellationSearchControl();
             this.headingControl2 = new Eurotrash.GrimDawn.WinFormsFrontEnd.Common.HeadingControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -114,8 +117,8 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private Common.HeadingControl headingControl1;
-        private Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Build.DevotionBuildControl _devotionBuildControl;
+        private DevotionBuildControl _devotionBuildControl;
         private Common.HeadingControl headingControl2;
-        private Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Search.ConstellationSearchControl _constellationSearchControl;
+        private ConstellationSearchControl _constellationSearchControl;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Build
+﻿namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
 {
     partial class DevotionBuildControl
     {
@@ -34,7 +34,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
-            this._devotionPathControl = new Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Build.DevotionPathControl();
+            this._devotionPathControl = new DevotionPathControl();
             this._tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();

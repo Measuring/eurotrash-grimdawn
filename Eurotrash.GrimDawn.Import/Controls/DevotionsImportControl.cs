@@ -1,17 +1,12 @@
-﻿using Eurotrash.GrimDawn.Core.Data;
-using Eurotrash.GrimDawn.Core.Data.Devotions;
+﻿using Eurotrash.GrimDawn.Core.Data.Devotions;
 using Eurotrash.GrimDawn.Import.Common;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Eurotrash.GrimDawn.Core.Extensions;
 using Eurotrash.GrimDawn.Import.Extensions;
 
 namespace Eurotrash.GrimDawn.Import.Controls
@@ -51,9 +46,7 @@ namespace Eurotrash.GrimDawn.Import.Controls
 
         private void _parseIndexButton_Click(object sender, EventArgs e)
         {
-#pragma warning disable 4014
-            ParseIndex();
-#pragma warning restore 4014
+            ParseIndex().ConfigureAwait(false);
         }
 
         private async Task ParseIndex(bool download = false, bool overwrite = false, bool parseDetails = false, bool downloadImages = false)
@@ -127,18 +120,17 @@ namespace Eurotrash.GrimDawn.Import.Controls
                 }
             }
 
-            await Task.WhenAll(downloadTasks).ContinueWith(task =>
+            await Task.WhenAll(downloadTasks);
+
+            if (parseDetails)
             {
-                if (parseDetails)
-                {
-                    string json = JsonConvert.SerializeObject(constellations, Formatting.Indented);
+                string json = JsonConvert.SerializeObject(constellations, Formatting.Indented);
 
-                    File.WriteAllText("constellations.json", json);
+                File.WriteAllText("constellations.json", json);
 
-                    Log("");
-                    Log(">> constellations.json created");
-                }
-            });
+                Log("");
+                Log(">> constellations.json created");
+            }
         }
 
         private Constellation ParseDetails(string text, string category = null, bool downloadImages = false)
@@ -335,7 +327,7 @@ namespace Eurotrash.GrimDawn.Import.Controls
         {
             ClearLog();
 
-            ParseIndex(parseDetails: true).Forget();
+            ParseIndex(parseDetails: true).ConfigureAwait(false);
         }
 
         private void _downloadImagesButton_Click(object sender, EventArgs e)

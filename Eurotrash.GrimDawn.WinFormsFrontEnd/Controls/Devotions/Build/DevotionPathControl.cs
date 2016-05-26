@@ -32,6 +32,8 @@ namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
         internal void SetDataSource(GrimDawnBuild build)
         {
             _build = build;
+
+            UpdateValidations();
             RebuildListView();
         }
 
@@ -72,8 +74,10 @@ namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
             listViewNode.Text = action.BuildIndex.ToString();
             listViewNode.SubItems.Add(action.ToString());
             listViewNode.SubItems.Add(action.PointsSpent.ToString());
-            listViewNode.SubItems.Add(action.AffinitiesGainedAfterAction.ToString());
+            listViewNode.SubItems.Add(action.AffinitiesGainedByAction.ToString());
             listViewNode.SubItems.Add(action.Comments);
+            listViewNode.SubItems.Add(action.PointsSpentAfterAction.ToString());
+            listViewNode.SubItems.Add(action.AffinitiesGainedAfterAction.ToString());
 
             listViewNode.UseItemStyleForSubItems = false;
 
@@ -89,6 +93,25 @@ namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
                 var action = e.Item.Tag as DevotionSelectionAction;
 
                 var image = AffinityImageCache.CreateImage(action.AffinitiesGainedByAction, _listView.Font);
+
+                e.Graphics.DrawImageUnscaledAndClipped(image, e.Bounds);
+            }
+            else if (e.ColumnIndex == 4)
+            {
+                var action = e.Item.Tag as DevotionSelectionAction;
+
+                if (action.HasValidationProblem)
+                {
+                    var image = AffinityImageCache.CreateImage(action.AffinityRequirementGap, _listView.Font);
+
+                    e.Graphics.DrawImageUnscaledAndClipped(image, e.Bounds);
+                }
+            }
+            else if (e.ColumnIndex == 6)
+            {
+                var action = e.Item.Tag as DevotionSelectionAction;
+
+                var image = AffinityImageCache.CreateImage(action.AffinitiesGainedAfterAction, _listView.Font);
 
                 e.Graphics.DrawImageUnscaledAndClipped(image, e.Bounds);
             }
@@ -117,12 +140,24 @@ namespace Eurotrash.GrimDawn.WinFormsFrontEnd.Controls.Devotions.Build
 
         private void _moveUpButton_Click(object sender, EventArgs e)
         {
+            int index = _listView.SelectedItems[0].Index;
 
+            SwapItems(index, index - 1);
         }
 
         private void _moveDownButton_Click(object sender, EventArgs e)
         {
+            int index = _listView.SelectedItems[0].Index;
 
+            SwapItems(index, index + 1);
+        }
+
+        private void SwapItems(int itemIndex, int otherItemIndex)
+        {
+            _build.Devotions.SwapActions(itemIndex, otherItemIndex);
+
+            UpdateValidations();
+            RebuildListView();
         }
 
         private void _removeButton_Click(object sender, EventArgs e)

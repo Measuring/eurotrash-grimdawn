@@ -95,11 +95,14 @@ namespace Eurotrash.GrimDawn.Core.Build.Devotions
         {
             var affinitiesGained = new AffinitySet();
             int index = 1;
+            int pointsSpentTotal = 0;
             foreach (var action in Actions)
             {
                 action.BuildIndex = index;
                 action.AffinitiesGainedBeforeAction = affinitiesGained;
                 action.Validate();
+                pointsSpentTotal += action.PointsSpent;
+                action.PointsSpentAfterAction = pointsSpentTotal;
 
                 affinitiesGained = affinitiesGained.Add(action.AffinitiesGainedByAction);
                 action.AffinitiesGainedAfterAction = affinitiesGained;
@@ -108,11 +111,23 @@ namespace Eurotrash.GrimDawn.Core.Build.Devotions
             }
         }
 
-        #endregion
+        public void SwapActions(int itemIndex, int otherItemIndex)
+        {
+            var item = this.Actions[itemIndex];
+            var otherItem = this.Actions[otherItemIndex];
 
-        #region Solution Finder Logic
+            this.Actions[itemIndex] = otherItem;
+            this.Actions[otherItemIndex] = item;
 
-        public IEnumerable<DevotionBuild> FindPossibleSolutions(int index, ConstellationCatalogue constellations)
+            UpdateActions();
+        }
+
+
+    #endregion
+
+    #region Solution Finder Logic
+
+    public IEnumerable<DevotionBuild> FindPossibleSolutions(int index, ConstellationCatalogue constellations)
         {
             int maxDepth = 4;
             int maxItems = 200;

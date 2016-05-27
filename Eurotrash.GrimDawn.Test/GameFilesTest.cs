@@ -15,7 +15,7 @@ namespace Eurotrash.GrimDawn.Test
         [TestMethod]
         public void GetGrimDawnExeAsyncTest()
         {
-            Assert.IsNotNull(GameFiles.GetGrimDawnExeAsync().Result);
+            Assert.IsNotNull(GameFiles.GetExeAsync().Result);
         }
     }
 }
